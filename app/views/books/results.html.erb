@@ -1,0 +1,10 @@
+<%#= @books.inspect %>
+<h2> You are searching for <%= @book_title %></h2>
+
+   <% @books.each do |item| %>
+		<p><%= item[0] %>
+		<p><%= item[1] %>
+		<p><%= item.inspect %>
+		<br/>
+		<button>Add book to your Library</button>
+		<% end %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  author: MyString
+  id: 1
+  owner_id: 1
+  borrower_id: 1
+
+two:
+  title: MyString
+  author: MyString
+  id: 1
+  owner_id: 1
+  borrower_id: 1
