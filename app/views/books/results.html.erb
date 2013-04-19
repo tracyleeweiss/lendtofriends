@@ -2,9 +2,27 @@
 <h2> You are searching for <%= @book_title %></h2>
 
    <% @books.each do |item| %>
-		<p><%= item[0] %>
-		<p><%= item[1] %>
-		<p><%= item.inspect %>
+   <p><img src="<%= item[:image_url]%>">
+		<strong><%= item[:title] %></strong>
+		<<em><%= item[:author] %></em>
+		
+		<%= item.inspect %>
 		<br/>
+		<!-- Form code -->
+
+		<form action="/add" method="post">
+<input type="hidden" name="book_title" value="<%= item[:title] %>">
+<input type="hidden" name="book_author" value="<%= item[:author] %>">
+<input type="hidden" name="book_image" value="<%= item[:image_url] %>">
+<input type="hidden" name="book_id" value="<%= item[:b_id] %>">
+
 		<button>Add book to your Library</button>
+</form>
+
+
+		<!-- end of form code -->
+
+
+	</p>
+	<hr>
 		<% end %>

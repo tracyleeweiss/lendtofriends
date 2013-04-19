@@ -1,8 +1,8 @@
 class Book < ActiveRecord::Base
-attr_accessible :author, :borrower_id, :id, :owner_id, :title
+attr_accessible :author, :borrower_id, :id, :owner_id, :title, :b_id, :image_url
 
 # make a migration that adds:
-  # b_id - book id (string)
+  # b_id - book id (string)		
   # image_url - string
 
 # when someone clicks 'Add to my library',

@@ -25,5 +25,24 @@ class BooksController < ApplicationController
    
   end
 
+  def add
+
+   Book.create({
+   	:title => params[:book_title],
+   	:author => params[:book_author],
+   	:b_id => params[:book_id],
+   	:image_url => params[:book_image],
+   	:owner_id => false #current_user.id
+   	}) 
+
+  end
+
+  def library
+
+  	@books = Book.all
+
+  end
+
+
 end
 
