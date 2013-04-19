@@ -1,16 +1,18 @@
 <%#= @books.inspect %>
-<h2> You are searching for <%= @book_title %></h2>
+
+<h2 class="card-container"> You are searching for <%= @book_title %></h2>
 
    <% @books.each do |item| %>
    <p><img src="<%= item[:image_url]%>">
 		<strong><%= item[:title] %></strong>
-		<<em><%= item[:author] %></em>
+		<em> By: <%= item[:author] %></em>
 		
-		<%= item.inspect %>
-		<br/>
+		
 		<!-- Form code -->
 
+
 		<form action="/add" method="post">
+
 <input type="hidden" name="book_title" value="<%= item[:title] %>">
 <input type="hidden" name="book_author" value="<%= item[:author] %>">
 <input type="hidden" name="book_image" value="<%= item[:image_url] %>">
@@ -18,11 +20,10 @@
 
 		<button>Add book to your Library</button>
 </form>
-
+<% end %>
 
 		<!-- end of form code -->
 
 
-	</p>
-	<hr>
-		<% end %>
+
+		

@@ -6,6 +6,8 @@ Libraryapp::Application.routes.draw do
   post '/books' => 'books#create'
   post '/add' => 'books#add'
   get 'library' => 'books#library'
+
+  post '/send_email', :to => 'main#send_email'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -43,6 +43,18 @@ class BooksController < ApplicationController
 
   end
 
+def check_out
+
+	end
+def send_email
+		@to = params[:to]
+        @subject = params[:subject]
+        YourMailer.form_email(@to, @subject, params[:body]).deliver
+
+	end
+
+
+
 
 end
 
