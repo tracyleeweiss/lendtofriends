@@ -3,11 +3,13 @@ Libraryapp::Application.routes.draw do
   root :to => 'pages#index'
 
   get '/search' => 'books#results'
-  post '/books' => 'books#create'
+  #post '/books' => 'books#create'
   post '/add' => 'books#add'
   get 'library' => 'books#library'
 
   post '/send_email', :to => 'main#send_email'
+  get '/checked_out', :to => 'books#checked_out'
+  resources :books, :only => [:update, :index]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

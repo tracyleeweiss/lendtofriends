@@ -16,6 +16,20 @@ a:active {color:#FEA6A2;}  /* selected link */
 a {
 	text-decoration: none;
 }
+.catalog-card {
+	border-radius: 8px;
+	width: 60%;
+	margin: 20px;
+	padding: 7px;
+	background-color: #79BAA0;
+    line-height: 2.5;
+    margin-right: 25px;
+	/*font-family: 'Special Elite', Courier New, Courier New, monospace;*/
+}
+.catalog-card li {
+	border-bottom: 1px solid #4E4340;
+	padding-bottom: 7px;
+}
 .check-out-card {
 	border-radius: 8px;
 	width: 60%;

@@ -1,3 +1,15 @@
+<ul class="catalog-card">
+	<li>Author:  <%= book.author %></li>
+	<li>Book:  <%= book.title %></li>
+		<% if !book.image_url.include? "nocover" %>
+	<li><img src="<%= book.image_url unless book.image_url.include? "nocover"%>"></li>
+	<%else%>
+		<%= image_tag("CardCatalog_482.jpg") %>
+		<% end %>
+		<%= form_for book, :html => {:class => "nifty_form"} do |f| %>
+          Lend to: <%= f.text_field :borrower_name %>
+           <%= f.submit "Lend" %>
+        <% end %>
 
-<h2> Book: <%= book.title %></h2>
-<h2>Author: <%= book.author %></h2>
+</ul>
+
