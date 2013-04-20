@@ -1,13 +1,11 @@
 <div class="card-container">
 	<h1>Checked out</h1>
-	<% @books.each do |book| %>
+	  <% @books.each do |book| %>
 
 	<ul class="catalog-card">
 		<li>Author:  <%= book.author %></li>
 		<li>Book:  <%= book.title %></li>
 		<li>Borrowed by: <%= book.borrower_name %></li>
-
-
 	</ul>
 
 	<% end %>

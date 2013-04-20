@@ -32,7 +32,7 @@ def add
 		:author => params[:book_author],
 		:id => params[:book_id],
 		:image_url => params[:book_image],
-   	:owner_id => false #current_user.id
+   	    :owner_id => false #current_user.id
    	}) 
 
 end
